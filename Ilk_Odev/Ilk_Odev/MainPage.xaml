@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ilk_Odev.MainPage"
+             BackgroundColor="LightGray">
+    
+        <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame  BackgroundColor="AntiqueWhite">
+                    <StackLayout>
+                        <Label Text="Dial A Phone Number" />
+                        <Entry Text="+90" Placeholder="Phone Number" MaxLength="13" Keyboard="Telephone" x:Name="EntryNumber_for_dial"/>
+                        <Button Clicked="Dial_Clicked" Text="Dial"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label Text="Compose An SMS Message" />
+                        <Entry Text="+90" Placeholder="Phone Number" MaxLength="13" Keyboard="Telephone" x:Name="EntryNumber_for_sms"/>
+                        <Entry Text="" Placeholder="Sms" x:Name="EntrySms"/>
+                        <Button Clicked="Send_ClickedAsync" Text="Send a SMS" />
+                    </StackLayout>
+                </Frame>
+                <Frame BackgroundColor="AntiqueWhite">
+                    <StackLayout>
+                        <Label Text="Send An E-mail" />
+                        <Entry Text="" Placeholder="E-mail Address" Keyboard="Email" x:Name="EntryEmail"/>
+                        <Entry Text="" Placeholder="Subject" x:Name="EntrySubject"/>
+                        <Button Clicked="Send_Email" Text="Send an Email" />
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label Text="Open A Website" />
+                        <Entry Text="https://ceng.eskisehir.edu.tr/" Placeholder="URL" Keyboard="Url" x:Name="EntryUrl"/>
+                        <Button Clicked="Open_Website" Text="Open Website" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="AntiqueWhite">
+                    <StackLayout>
+                        <Label Text="Open Location" />
+                        <Entry Text="" Placeholder="Location" x:Name="EntryLocation"/>
+                        <Button Clicked="Open_Map" Text="Open Location" />
+                    </StackLayout>
+                </Frame>
+
+
+
+
+                <Button Clicked="Button_Clicked" Text="Delete Login Data!"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+
+</ContentPage>
